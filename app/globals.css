@@ -86,6 +86,23 @@
   }
 }
 
+/* Font fallbacks for better rendering */
+.font-open-sans {
+  font-family: var(--font-open-sans), system-ui, -apple-system, sans-serif;
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+}
+
+.font-baloo {
+  font-family: var(--font-baloo), system-ui, -apple-system, sans-serif;
+}
+
+.font-inter {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
 /* Custom styles for react-resizable */
 .resizable-text-box .react-resizable-handle {
   position: absolute;

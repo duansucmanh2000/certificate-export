@@ -1,33 +1,40 @@
-import { Open_Sans, Montserrat, Baloo_2, Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-// Configure fonts with fallbacks and error handling
-export const openSans = Open_Sans({
-  subsets: ["latin", "vietnamese"],
+// Use local fonts to avoid Google Fonts timeout issues on VPS
+// These fonts will work reliably without network dependencies
+
+export const openSans = localFont({
+  src: "../assets/font/vnf-caviar.ttf",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-  fallback: ["system-ui", "arial", "sans-serif"],
-  preload: false, // Disable preloading to avoid timeout issues
+  weight: "400",
+  variable: "--font-open-sans",
 });
 
-export const montserrat = Montserrat({
-  subsets: ["latin"],
+export const montserrat = localFont({
+  src: "../assets/font/vnf-caviar.ttf",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-  fallback: ["system-ui", "arial", "sans-serif"],
-  preload: false,
+  weight: "400",
+  variable: "--font-montserrat",
 });
 
-export const baloo = Baloo_2({
-  subsets: ["latin"],
+export const baloo = localFont({
+  src: "../assets/font/iCielNabila.ttf",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
-  fallback: ["system-ui", "arial", "sans-serif"],
-  preload: false,
+  weight: "400",
+  variable: "--font-baloo",
 });
 
-export const inter = Inter({
-  subsets: ["latin"],
+export const inter = localFont({
+  src: "../assets/font/vnf-caviar.ttf",
   display: "swap",
-  fallback: ["system-ui", "arial", "sans-serif"],
-  preload: false,
+  weight: "400",
+  variable: "--font-inter",
 });
+
+// CSS fallback classes for better font rendering
+export const fontClasses = {
+  openSans: "font-sans",
+  montserrat: "font-sans",
+  baloo: "font-sans",
+  inter: "font-sans",
+};
