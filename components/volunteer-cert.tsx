@@ -8,7 +8,7 @@ import Banner from "@/assets/banner.png";
 import LogoBottom from "@/assets/img-bottom.svg";
 import { cn, converDateToVietnameseFormat } from "@/lib/utils";
 import localFont from "next/font/local";
-import { openSans } from "@/lib/fonts";
+import { Open_Sans } from "next/font/google";
 
 const iCielNabila = localFont({
   src: "../assets/font/iCielNabila.ttf",
@@ -17,6 +17,11 @@ const vnfCaviar = localFont({
   src: "../assets/font/vnf-caviar.ttf",
   display: "swap",
   weight: "400",
+});
+const openSans = Open_Sans({
+  subsets: ["latin", "vietnamese"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 interface VolunteerCertificateTemplateProps {

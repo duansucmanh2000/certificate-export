@@ -5,10 +5,21 @@ import LeaderSign from "@/assets/sign.png";
 import FireLogo from "@/assets/donnor-letter/fire-logo.webp";
 import SmLogo from "@/assets/donnor-letter/sm-logo.webp";
 import { cn } from "@/lib/utils";
-import { montserrat, baloo } from "@/lib/fonts";
+import { Montserrat, Baloo_2 } from "next/font/google";
 import { ResizableBox } from "react-resizable";
 import "react-resizable/css/styles.css";
 import { forwardRef } from "react";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+const baloo = Baloo_2({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
 
 interface ThankYouLetterDonnorProps {
   name?: string;
