@@ -8,17 +8,13 @@ import Banner from "@/assets/banner.png";
 import LogoBottom from "@/assets/img-bottom.svg";
 import { cn, converDateToVietnameseFormat } from "@/lib/utils";
 import localFont from "next/font/local";
+import { openSans } from "@/lib/fonts";
 
 const iCielNabila = localFont({
   src: "../assets/font/iCielNabila.ttf",
 });
 const vnfCaviar = localFont({
   src: "../assets/font/vnf-caviar.ttf",
-  display: "swap",
-  weight: "400",
-});
-const openSans = localFont({
-  src: "../assets/font/vnf-caviar.ttf", // Using local font instead of Google Fonts
   display: "swap",
   weight: "400",
 });

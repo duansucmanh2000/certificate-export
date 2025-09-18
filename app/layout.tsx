@@ -1,13 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { inter } from "@/lib/fonts";
 import Sidebar from "@/components/Sidebar";
-
-const inter = localFont({
-  src: "../assets/font/vnf-caviar.ttf",
-  display: "swap",
-  weight: "400",
-});
 
 export const metadata: Metadata = {
   title: "Certificate Generator",
